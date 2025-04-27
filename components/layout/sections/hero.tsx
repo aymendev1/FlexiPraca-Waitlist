@@ -1,10 +1,8 @@
 "use client";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import Link from "next/link";
+import { WaitListInput } from "@/components/ui/waitlist-input";
 
 export const HeroSection = () => {
   const { theme } = useTheme();
@@ -16,31 +14,26 @@ export const HeroSection = () => {
             <span className="mr-2 text-primary">
               <Badge>New</Badge>
             </span>
-            <span> Design is out now! </span>
+            <span> Launching Soon! </span>
           </Badge>
 
           <div className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold">
             <h1>
-              Experience the
+              Find the
               <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
-                Shadcn
+                Flexible
               </span>
-              landing page
+              Work and Workers.
             </h1>
           </div>
 
           <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-            {`We're more than just a tool, we're a community of passionate
-            creators. Get access to exclusive resources, tutorials, and support.`}
+            {`Students, workers, and businesses — connect fast for day shifts, weekend jobs, or longer opportunities.`}
           </p>
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
-            <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
-              Get Started
-              <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
-            </Button>
-
-            <Button
+            <WaitListInput />
+            {/*  <Button
               asChild
               variant="secondary"
               className="w-5/6 md:w-1/4 font-bold"
@@ -51,7 +44,7 @@ export const HeroSection = () => {
               >
                 Github respository
               </Link>
-            </Button>
+            </Button> */}
           </div>
         </div>
 
