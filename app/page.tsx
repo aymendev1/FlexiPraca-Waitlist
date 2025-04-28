@@ -49,10 +49,7 @@ export default function Home() {
       <FeaturesSection />
       <WhyUsSection />
       <ServiceSection />
-      {/*  <TestimonialSection /> */}
-      {/*  <TeamSection /> */}
       <CommunitySection />
-      {/*  <PricingSection /> */}
       <ContactSection />
       <FAQSection />
       <FooterSection />
