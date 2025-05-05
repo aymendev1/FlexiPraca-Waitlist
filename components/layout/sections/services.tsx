@@ -1,5 +1,6 @@
 "use client";
 import { WobbleCard } from "@/components/ui/wobble-card";
+import Image from "next/image";
 import React from "react";
 
 export const ServiceSection = () => {
@@ -30,7 +31,7 @@ export const ServiceSection = () => {
               insights to make your staffing more efficient.
             </p>
           </div>
-          <img
+          <Image
             src="/dashboard.png"
             width={700}
             height={700}
@@ -61,7 +62,7 @@ export const ServiceSection = () => {
               it most.
             </p>
           </div>
-          <img
+          <Image
             src="/dashboard.png"
             width={700}
             height={700}

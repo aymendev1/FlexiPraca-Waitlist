@@ -68,10 +68,10 @@ export const ContactSection = () => {
             <h2 className="text-3xl md:text-4xl font-bold">Connect With Us</h2>
           </div>
           <p className="mb-8 text-muted-foreground lg:w-5/6">
-            Have questions or need more information? Our team is ready to assist
+            {`Have questions or need more information? Our team is ready to assist
             you. Whether you're interested in learning more about how Flexi
             Praca can support your business or need help with any inquiries,
-            we're here to help.
+            we're here to help.`}
           </p>
 
           <div className="flex flex-col gap-4">
