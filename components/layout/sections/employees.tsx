@@ -2,66 +2,62 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
 import { icons } from "lucide-react";
 
-interface FeaturesProps {
+interface EmployeesProps {
   icon: string;
   title: string;
   description: string;
 }
 
-const featureList: FeaturesProps[] = [
+const featureList: EmployeesProps[] = [
   {
-    icon: "TabletSmartphone",
-    title: "Mobile Friendly",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+    icon: "FilePlus2",
+    title: "Post Jobs Instantly",
+    description: "Create and publish shifts in just minutes.",
   },
   {
-    icon: "BadgeCheck",
-    title: "Social Proof",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+    icon: "Users",
+    title: "Access a Talent Pool",
+    description: "Tap into a growing community of local, ready-to-work people.",
   },
   {
-    icon: "Goal",
-    title: "Targeted Content",
+    icon: "ShieldCheck",
+    title: "Verified Workers",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+      "Hire reliable workers with confidence thanks to our employers review feature.",
   },
   {
-    icon: "PictureInPicture",
-    title: "Strong Visuals",
-    description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
+    icon: "RefreshCcw",
+    title: "Flexible Hiring Options",
+    description: "Book for a day, a weekend, or longer — you decide.",
   },
   {
-    icon: "MousePointerClick",
-    title: "Clear CTA",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
+    icon: "HandCoins",
+    title: "Save Time and Money",
+    description: "Avoid long recruitment processes and agency fees.",
   },
   {
-    icon: "Newspaper",
-    title: "Clear Headline",
+    icon: "BarChart",
+    title: "Scale When You Need",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
+      "Quickly ramp up your team for busy periods or special events.",
   },
 ];
 
-export const FeaturesSection = () => {
+export const EmployeesSection = () => {
   return (
-    <section id="features" className="container py-24 sm:py-32">
+    <section id="employers" className="container py-24 sm:py-32">
       <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
-        Features
+        For Employers
       </h2>
 
       <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-        What Makes Us Different
+        Find Reliable Help
       </h2>
 
       <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-        fugiat, odit similique quasi sint reiciendis quidem iure veritatis optio
-        facere tenetur.
+        Cafés, restaurants, warehouses, and event organizers — FlexiPraca makes
+        it easy to find reliable, flexible workers when you need them most. Post
+        a shift, get matched, and keep your business moving forward.
       </h3>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

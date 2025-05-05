@@ -2,58 +2,58 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
 import { icons } from "lucide-react";
 
-interface BenefitsProps {
+interface WorkersProps {
   icon: string;
   title: string;
   description: string;
 }
 
-const benefitList: BenefitsProps[] = [
+const WorkersList: WorkersProps[] = [
   {
-    icon: "Blocks",
-    title: "Build Brand Trust",
+    icon: "Calendar",
+    title: "Choose When You Work",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
-  },
-  {
-    icon: "LineChart",
-    title: "More Leads",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.",
+      "Pick shifts that fit your life — evenings, weekends, full weeks.",
   },
   {
     icon: "Wallet",
-    title: "Higher Conversions",
+    title: "Fast Payments",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur. A odio velit cum aliquam",
+      "Get paid quickly after your completed work. No long waiting periods.",
   },
   {
-    icon: "Sparkle",
-    title: "Test Marketing Ideas",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+    icon: "Shield",
+    title: "Trusted Companies",
+    description: "Work with verified local businesses you can rely on.",
+  },
+  {
+    icon: "TrendingUp",
+    title: "Grow Your Skills",
+    description: "Gain experience in hospitality, logistics, events, and more.",
   },
 ];
 
-export const BenefitsSection = () => {
+export const WorkerSection = () => {
   return (
-    <section id="benefits" className="container py-24 sm:py-32">
+    <section id="workers" className="container py-24 sm:py-32">
       <div className="grid lg:grid-cols-2 place-items-center lg:gap-24">
         <div>
-          <h2 className="text-lg text-primary mb-2 tracking-wider">Benefits</h2>
-
+          <h2 className="text-lg text-primary mb-2 tracking-wider">
+            For Workers
+          </h2>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Your Shortcut to Success
+            Find Flexible Work
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
-            ducimus reprehenderit architecto rerum similique facere odit
-            deleniti necessitatibus quo quae.
+            Whether you’re a student, freelancer, or just looking for extra cash
+            — FlexiPraca connects you with trusted local jobs that fit your
+            schedule. Work today, get paid fast, and stay in control of your
+            time!
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-4 w-full">
-          {benefitList.map(({ icon, title, description }, index) => (
+          {WorkersList.map(({ icon, title, description }, index) => (
             <Card
               key={title}
               className="bg-muted/50 dark:bg-card hover:bg-background transition-all delay-75 group/number"

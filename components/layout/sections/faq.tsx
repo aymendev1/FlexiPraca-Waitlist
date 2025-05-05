@@ -13,33 +13,52 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free NextJS Shadcn template.",
+    question: "What is FlexiPraca?",
+    answer:
+      "FlexiPraca is a platform designed to connect businesses in Poland with workers looking for flexible, short-term job opportunities in industries like gastronomy, events, and more. Whether you're a student or a local business, FlexiPraca makes it easy to find the right match for your needs.",
     value: "item-1",
   },
   {
-    question: "Duis aute irure dolor in reprehenderit in voluptate velit?",
+    question: "How can I join the waitlist?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam consectetur sapiente, iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "Simply enter your email on the waitlist section to secure your spot! Once we launch, you’ll get early access to our platform and be among the first to find or post job opportunities. 🚀",
     value: "item-2",
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet Consectetur natus dolor minus quibusdam?",
+    question: "Who can use FlexiPraca?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis.",
+      "FlexiPraca is ideal for students seeking flexible work for a day, week, or more, and for businesses like cafes, restaurants, and event organizers in need of reliable, short-term staff.",
     value: "item-3",
   },
   {
-    question: "Excepteur sint occaecat cupidata non proident sunt?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    question: "What features will businesses have access to?",
+    answer:
+      "Once the platform is live, businesses will be able to post flexible shifts, access a powerful analytics dashboard, track worker performance, and gain insights on applicants to make smarter hiring decisions.",
     value: "item-4",
   },
   {
-    question:
-      "Enim ad minim veniam, quis nostrud exercitation ullamco laboris?",
-    answer: "consectetur adipisicing elit. Sint labore.",
+    question: "Is the service free?",
+    answer:
+      "Yes! FlexiPraca will be free to use for both workers and businesses. You can sign up, join the waitlist, and start posting or applying for jobs at no cost. We're all about making flexible work easy and accessible!",
     value: "item-5",
+  },
+  {
+    question: "When will FlexiPraca launch?",
+    answer:
+      "FlexiPraca is currently in development. By joining the waitlist, you'll be the first to know when we officially launch and gain early access to the platform.",
+    value: "item-6",
+  },
+  {
+    question: "Is FlexiPraca available only in Poland?",
+    answer:
+      "Yes, for now, FlexiPraca is focused on serving local businesses and students in Poland. We’re working on expanding, but our primary goal is to create a strong local community first.",
+    value: "item-7",
+  },
+  {
+    question: "How do I contact support if I have any questions?",
+    answer:
+      "If you have any questions or need assistance, feel free to contact us through our website or email at [your email]. Our team is happy to assist you!",
+    value: "item-8",
   },
 ];
 

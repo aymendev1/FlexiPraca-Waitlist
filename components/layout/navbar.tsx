@@ -39,8 +39,16 @@ const routeList: RouteProps[] = [
     label: "For Employers",
   },
   {
-    href: "#waitlist",
-    label: "Join Waitlist",
+    href: "#why-us",
+    label: "Why US",
+  },
+  {
+    href: "#services",
+    label: "Services",
+  },
+  {
+    href: "#wait-list",
+    label: "Join Us",
   },
   {
     href: "#faq",
@@ -110,7 +118,7 @@ export const Navbar = () => {
           <NavigationMenuItem>
             {routeList.map(({ href, label }) => (
               <NavigationMenuLink key={href} asChild>
-                <Link href={href} className="text-base px-2">
+                <Link href={href} className="text-sm px-2">
                   {label}
                 </Link>
               </NavigationMenuLink>
@@ -122,12 +130,13 @@ export const Navbar = () => {
       <div className="hidden lg:flex">
         <ToggleTheme />
 
-        <Button asChild size="sm" variant="ghost" aria-label="View on GitHub">
-          <Link
-            aria-label="View on GitHub"
-            href="https://github.com/nobruf/shadcn-landing-page.git"
-            target="_blank"
-          >
+        <Button
+          asChild
+          size="sm"
+          variant="ghost"
+          aria-label="Visit founder on GitHub"
+        >
+          <Link href="https://github.com/aymendev1" target="_blank">
             <Github className="size-5" />
           </Link>
         </Button>
