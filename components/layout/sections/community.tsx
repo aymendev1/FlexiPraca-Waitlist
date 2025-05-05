@@ -10,7 +10,7 @@ import { PartyPopper } from "lucide-react";
 
 export const CommunitySection = () => {
   return (
-    <section id="community" className="py-12 ">
+    <section id="wait-list" className="py-12 ">
       <hr className="border-secondary" />
       <div className="container py-20 sm:py-20">
         <div className="lg:w-[60%] mx-auto">

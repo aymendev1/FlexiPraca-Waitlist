@@ -42,7 +42,7 @@ const WhyUsList: WhyUsProps[] = [
 
 export const WhyUsSection = () => {
   return (
-    <section id="WhyUs" className="container py-24 sm:py-32">
+    <section id="why-us" className="container py-24 sm:py-32">
       <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
         Services
       </h2>

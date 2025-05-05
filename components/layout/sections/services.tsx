@@ -1,11 +1,10 @@
 "use client";
-import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import { WobbleCard } from "@/components/ui/wobble-card";
 import React from "react";
 
 export const ServiceSection = () => {
   return (
-    <section id="WhyUs" className="container py-24 sm:py-32">
+    <section id="services" className="container py-24 sm:py-32">
       <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
         Services
       </h2>

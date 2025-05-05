@@ -2,13 +2,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
 import { icons } from "lucide-react";
 
-interface FeaturesProps {
+interface EmployeesProps {
   icon: string;
   title: string;
   description: string;
 }
 
-const featureList: FeaturesProps[] = [
+const featureList: EmployeesProps[] = [
   {
     icon: "FilePlus2",
     title: "Post Jobs Instantly",
@@ -43,9 +43,9 @@ const featureList: FeaturesProps[] = [
   },
 ];
 
-export const FeaturesSection = () => {
+export const EmployeesSection = () => {
   return (
-    <section id="features" className="container py-24 sm:py-32">
+    <section id="employers" className="container py-24 sm:py-32">
       <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
         For Employers
       </h2>
