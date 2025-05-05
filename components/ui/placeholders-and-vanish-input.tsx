@@ -29,7 +29,7 @@ export function PlaceholdersAndVanishInput({
       startAnimation(); // Restart the interval when the tab becomes visible
     }
   };
-
+  // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     startAnimation();
     document.addEventListener("visibilitychange", handleVisibilityChange);
