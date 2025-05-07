@@ -1,6 +1,5 @@
 "use client";
 import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input";
-import { supabase } from "@/lib/supabaseClient";
 import { useState, FormEvent } from "react";
 import React from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -24,24 +23,26 @@ export const WaitListInput = () => {
   // Handle form submission
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const { error } = await supabase
-      .from("waitlist_subscribers")
-      .insert([{ email }]);
-
-    if (error) {
-      // Duplicate Error Handling
-      if (
-        error.code === "23505" || // Postgres unique_violation code
-        error.message.includes("duplicate key value")
-      ) {
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        body: JSON.stringify({ email }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      // The following API Endpoint can return 3 statuses :
+      // 409 - Duplicate email : already subscribed
+      if (res.status === 409) {
+        //
         toast({
           title: "💪 Already Subscribed",
           description: `This email is already on our waitlist. We’ll keep you in the loop with updates! 👀`,
         });
-        console.error("Duplicate email detected:", email);
-      } else {
-        // Server Error
-
+        console.warn("Duplicate email detected:", email);
+      }
+      // 500 - Server error : unable to process the request
+      else if (!res.ok) {
         toast({
           variant: "destructive",
           title: "Uh oh! Something went wrong.",
@@ -52,15 +53,23 @@ export const WaitListInput = () => {
             </ToastAction>
           ),
         });
-        console.error("Error inserting email:", error.message);
+        console.error("Server error:", await res.text());
       }
-    } else {
+      // 200 - Success : email added to the waitlist
+      else {
+        toast({
+          title: "🎉 You're on the List!",
+          description: `Thanks for joining FlexiPraca's waitlist — you're officially one of the first! We'll keep you posted with early updates and launch news.`,
+        });
+        setEmail("");
+      }
+    } catch (error) {
       toast({
-        title: "🎉 You're on the List!",
-        description: `Thanks for joining FlexiPraca's waitlist — you're officially one of the first! We'll keep you posted with early updates and launch news.`,
+        variant: "destructive",
+        title: "Network Error",
+        description: "Please check your connection and try again.",
       });
-
-      setEmail("");
+      console.error("Fetch error:", error);
     }
   }
 
